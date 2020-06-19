@@ -1,12 +1,21 @@
 <template>
   <div class="">
-    <h2>首页</h2>
+    <nav-bar>
+      <div class="left" slot="left"></div>
+      <div class="center" slot="center">购物街</div>
+      <div class="right" slot="right"></div>
+    </nav-bar>
   </div>
 </template>
 
 <script>
+
+import NavBar from 'components/common/navbar/NavBar.vue'
+
 export default {
-  components:{},
+  components:{
+    NavBar,
+  },
   data(){
     return {
     }
@@ -19,4 +28,15 @@ export default {
 }
 </script>
 <style scoped>
+  .center{
+    height: 44px;
+    flex: 1;
+    /* text-align: center; */
+    background-color: green;
+  }
+  .left, .right{
+    height: 44px;
+    width: 60px;
+    background-color: deeppink;
+  }
 </style>
